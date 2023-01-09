@@ -34,29 +34,31 @@ background-color: #1a1a1f;
 .button {
 	background: #3D96F4;
 border-radius: 50px;
-padding: 12px 25px;
-display: inline-block;
 color: #FFFFFF;
 font-weight: 500;
 font-size: 14px;
 line-height: 22px;
 letter-spacing: 2px;
 cursor: pointer;
-background: transparent;
 border: 1px solid #91C9FF;
-outline: none;
+width: 152px;
+height: 52px;
+display: flex;
+align-items: center;
+justify-content: center;
+
 }
 
 .button:hover {
-	transition: 0.1s ease-in-out;
-	background: #4F95DA;
+	transition: 0.2s ease-in-out;
+	background: #215f98;
 }
 
 
-@media (max-width: 991.98px){
+/* @media (max-width: 991.98px){
 	.button {
-		padding: 12px 18px;
-	}}
+
+	}} */
 /* ______________________________________ */
 
 /* ________________HEADER________________ */
@@ -134,7 +136,7 @@ outline: none;
 	justify-content: center;
 }
 .header__button{
-	flex: 0 0 auto;
+	
 }
 
 .header__button {
@@ -160,7 +162,7 @@ outline: none;
 		flex:  0 0 30px;
 		height: 18px;
 		position: relative;
-		z-index: 5;
+		z-index: 51;
 		background-color: rgb(16, 4, 4);
 	}
 	.icon-menu span,
@@ -226,6 +228,10 @@ outline: none;
 		min-height: 70px;
 	}
 }
+
+.menu-open, .menu__body{
+	z-index: 50;
+}
 .menu-open .menu__body,
 .menu-open .menu__body::before{
 	left: 0;
@@ -255,8 +261,7 @@ outline: none;
 	
 }
 .page{
-	flex: 1 1 auto;
-	z-index: -11;
+
 }
 .main {
 	padding-top: 130px;
@@ -307,13 +312,13 @@ position: relative;
 	
 }
 .main__button {
-	flex: 0 0 auto;
+	
 }
 
 .button_dark {
 	background-color: rgb(239, 235, 235);
 	color: #000;
-	
+
 
 }
 
@@ -629,16 +634,21 @@ color: #81818B;
 						font-size: 51.2px;
 						line-height: 61px;
 						color: #FFFFFF;
+						margin-bottom: 25px;
 					}
 					.testimonials__text {
 						grid-area: testimonials__text;
 						font-weight: 300;
 						font-size: 18px;
 						line-height: 27px;
-						display: flex;
-						align-items: center;
+						text-align: left;
 						color: #9C9C9C;
 					}
 					.testimonials__button {
+						display: block;
 						grid-area: testimonials__button;
+
+					}
+					.testimonials__button :hover {
+						display: none;
 					}
