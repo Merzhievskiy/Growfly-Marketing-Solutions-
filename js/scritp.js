@@ -26,7 +26,7 @@ if (popupLinks.length > 0) {
 		const popupLink = popupLinks[index];
 		popupLink.addEventListener("click", function (e) {
 			const popupName = popupLink.getAttribute('href').replace('#', '');
-			const curentPopup = document.getElementById(popupname);
+			const curentPopup = document.getElementById(popupName);
 			popupOpen(curentPopup);
 			e.preventDefault();
 		})
@@ -38,7 +38,7 @@ if (popupCloseIcon.length > 0) {
 	for (let index = 0; index < popupCloseIcon.length; index++) {
 		const el = popupCloseIcon[index];
 		el.addEventListener('click', function (e) {
-			popupClose(el.closest('contactus__popup'));
+			popupClose(el.closest('.popup-contactus__content'));
 			e.preventDefault();
 		});
 	}
